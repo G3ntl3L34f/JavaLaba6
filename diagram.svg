@@ -1,0 +1,154 @@
+<svg class="light" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 473.89 918" width="473.89" height="918">
+  <style>:root, .light {
+    --_lm: ;
+    --_dm: initial;
+    --bg: #ffffff;
+    --fg: #1f1f1f;
+    --line: #545454;
+    --accent: #1a73e8;
+    --surface: #f8f9fa;
+    --border: #747775;
+  }
+
+  .dark {
+    --_lm: initial;
+    --_dm: ;
+    --bg: #1f1f1f;
+    --fg: #e3e3e3;
+    --line: #bfbfbf;
+    --accent: #8ab4f8;
+    --surface: #2d2e30;
+    --border: #8e918f;
+  }
+  @import url('https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;600;700&amp;family=Google+Sans+Mono:wght@400;500;600;700&amp;display=swap');
+  text { font-family: 'Google Sans', sans-serif; }
+  .mono { font-family: 'Google Sans Mono', monospace; }
+  svg {
+    --_text:          var(--primaryTextColor, var(--fg));
+    --_text-sec:      var(--muted, color-mix(in srgb, var(--fg) 60%, var(--bg)));
+    --_text-muted:    var(--muted, color-mix(in srgb, var(--fg) 40%, var(--bg)));
+    --_text-faint:    color-mix(in srgb, var(--fg) 25%, var(--bg));
+    --_line:          var(--lineColor, var(--defaultLinkColor, var(--line, color-mix(in srgb, var(--fg) 50%, var(--bg)))));
+    --_arrow:         var(--_line);
+    --_node-fill:     var(--primaryColor, var(--surface, color-mix(in srgb, var(--fg) 3%, var(--bg))));
+    --_node-stroke:   var(--primaryBorderColor, var(--nodeBorder, var(--border, color-mix(in srgb, var(--fg) 20%, var(--bg)))));
+    --_group-fill:    var(--surface, var(--bg));
+    --_group-hdr:     color-mix(in srgb, var(--fg) 5%, var(--bg));
+    --_inner-stroke:  var(--_node-stroke);
+    --_key-badge:     color-mix(in srgb, var(--fg) 10%, var(--bg));
+  }
+.class-box { fill: var(--classBkg, var(--_node-fill)); stroke: var(--classBorder, var(--_node-stroke)); stroke-width: var(--_node-stroke-width, 1px); }
+.class-header-box { fill: var(--classHeaderBkg, var(--_group-hdr)); stroke: var(--classBorder, var(--_node-stroke)); stroke-width: var(--_node-stroke-width, 1px); }
+.class-title { fill: var(--classTextColor, var(--_text)); font-weight: 700; }
+.class-annotation { fill: var(--_text-muted); font-size: 10px; font-weight: 500; font-style: italic; }
+.class-divider { stroke: var(--classBorder, var(--_node-stroke)); stroke-width: 1px; }
+.class-member { font-size: 11px; font-weight: 400; }
+.member-visibility { fill: var(--_text-muted); }
+.member-name { fill: var(--_text); }
+.member-punct { fill: var(--_text-muted); }
+.member-type { fill: var(--_text-sec); }
+.class-relationship { fill: none; stroke: var(--_line); stroke-width: 1.5; }
+.edge-label-bg { fill: var(--bg); stroke: var(--_inner-stroke); stroke-width: 1.0; }
+.edge-label { fill: var(--_text-sec); }</style>
+  <defs>
+    <marker id="cls-inherit" refX="12" refY="5" markerWidth="12" markerHeight="10" orient="auto-start-reverse">
+      <polygon points="0,0 12,5 0,10" fill="var(--bg)" stroke="var(--_arrow)" stroke-width="1.5"/>
+    </marker>
+    <marker id="cls-composition" refX="12" refY="5" markerWidth="12" markerHeight="10" orient="auto-start-reverse">
+      <polygon points="6,0 12,5 6,10 0,5" fill="var(--_arrow)" stroke="var(--_arrow)" stroke-width="1"/>
+    </marker>
+    <marker id="cls-aggregation" refX="12" refY="5" markerWidth="12" markerHeight="10" orient="auto-start-reverse">
+      <polygon points="6,0 12,5 6,10 0,5" fill="var(--bg)" stroke="var(--_arrow)" stroke-width="1.5"/>
+    </marker>
+    <marker id="cls-arrow" refX="8" refY="3" markerWidth="8" markerHeight="6" orient="auto-start-reverse">
+      <polyline points="0,0 8,3 0,6" fill="none" stroke="var(--_arrow)" stroke-width="1.5"/>
+    </marker>
+  </defs>
+  <g transform="translate(-9.82, -35)">
+    <polyline points="138.98,154 138.98,223 61.82,223 61.82,572 128.25,572" class="class-relationship" stroke-dasharray="6 4" marker-start="url(#cls-inherit)" data-from="ITemperatureMeasure" data-to="TemperatureMeasure" data-type="realization" data-marker-at="source" data-label="Реализует"/>
+    <polyline points="235.25,650 235.25,686 339.24,686 339.24,790" class="class-relationship" marker-start="url(#cls-aggregation)" data-from="TemperatureMeasure" data-to="Sensor" data-type="aggregation" data-marker-at="source" data-label="Агрегация (h)"/>
+    <polyline points="163.8,650 163.8,770" class="class-relationship" marker-start="url(#cls-composition)" data-from="TemperatureMeasure" data-to="MeasureCount" data-type="composition" data-marker-at="source" data-label="Композиция (measure)"/>
+    <polyline points="257.45,342 257.45,462" class="class-relationship" stroke-dasharray="6 4" marker-end="url(#cls-arrow)" data-from="ShowTemperature" data-to="TemperatureMeasure" data-type="dependency" data-marker-at="target" data-label="Зависимость (использует)"/>
+    <polyline points="365.05,136 365.05,223 403.97,223 403.97,790" class="class-relationship" stroke-dasharray="6 4" marker-end="url(#cls-arrow)" data-from="Main" data-to="Sensor" data-type="dependency" data-marker-at="target" data-label="Создает"/>
+    <polyline points="365.05,136 365.05,239 422.65,239 422.65,572 342.25,572" class="class-relationship" stroke-dasharray="6 4" marker-end="url(#cls-arrow)" data-from="Main" data-to="TemperatureMeasure" data-type="dependency" data-marker-at="target" data-label="Создает"/>
+    <polyline points="365.05,136 365.05,274" class="class-relationship" stroke-dasharray="6 4" marker-end="url(#cls-arrow)" data-from="Main" data-to="ShowTemperature" data-type="dependency" data-marker-at="target" data-label="Вызывает"/>
+    <g class="class-node" data-id="ITemperatureMeasure" data-label="ITemperatureMeasure" data-annotation="interface">
+      <rect x="50" y="50" width="177.95" height="104" rx="0" ry="0" class="node-shape class-box"/>
+      <rect x="50" y="50" width="177.95" height="48" rx="0" ry="0" class="class-header-box"/>
+      <text x="138.98" y="62" class="class-annotation" text-anchor="middle" dy="0.35em">&lt;&lt;interface&gt;&gt;</text>
+      <text x="138.98" y="80" font-size="13" class="node-label class-title" text-anchor="middle" dy="4.55px">ITemperatureMeasure</text>
+      <line x1="50" y1="98" x2="227.95" y2="98" class="class-divider"/>
+      <line x1="50" y1="106" x2="227.95" y2="106" class="class-divider"/>
+      <text x="58" y="120" class="class-member mono" dy="0.35em"><tspan class="member-visibility">+ </tspan><tspan class="member-name">setValue()</tspan><tspan class="member-punct">: </tspan><tspan class="member-type">void</tspan></text>
+      <text x="58" y="140" class="class-member mono" dy="0.35em"><tspan class="member-visibility">+ </tspan><tspan class="member-name">getValue()</tspan><tspan class="member-punct">: </tspan><tspan class="member-type">double</tspan></text>
+    </g>
+    <g class="class-node" data-id="Main" data-label="Main">
+      <rect x="267.95" y="68" width="194.2" height="68" rx="0" ry="0" class="node-shape class-box"/>
+      <rect x="267.95" y="68" width="194.2" height="32" rx="0" ry="0" class="class-header-box"/>
+      <text x="365.05" y="84" font-size="13" class="node-label class-title" text-anchor="middle" dy="4.55px">Main</text>
+      <line x1="267.95" y1="100" x2="462.15" y2="100" class="class-divider"/>
+      <line x1="267.95" y1="108" x2="462.15" y2="108" class="class-divider"/>
+      <text x="275.95" y="122" class="class-member mono" text-decoration="underline" dy="0.35em"><tspan class="member-visibility">+ </tspan><tspan class="member-name">main(String[] args)</tspan><tspan class="member-punct">: </tspan><tspan class="member-type">void</tspan></text>
+    </g>
+    <g class="class-node" data-id="ShowTemperature" data-label="ShowTemperature">
+      <rect x="137.25" y="274" width="240.4" height="68" rx="0" ry="0" class="node-shape class-box"/>
+      <rect x="137.25" y="274" width="240.4" height="32" rx="0" ry="0" class="class-header-box"/>
+      <text x="257.45" y="290" font-size="13" class="node-label class-title" text-anchor="middle" dy="4.55px">ShowTemperature</text>
+      <line x1="137.25" y1="306" x2="377.65" y2="306" class="class-divider"/>
+      <line x1="137.25" y1="314" x2="377.65" y2="314" class="class-divider"/>
+      <text x="145.25" y="328" class="class-member mono" text-decoration="underline" dy="0.35em"><tspan class="member-visibility">+ </tspan><tspan class="member-name">show(TemperatureMeasure t)</tspan><tspan class="member-punct">: </tspan><tspan class="member-type">void</tspan></text>
+    </g>
+    <g class="class-node" data-id="TemperatureMeasure" data-label="TemperatureMeasure">
+      <rect x="128.25" y="462" width="214" height="188" rx="0" ry="0" class="node-shape class-box"/>
+      <rect x="128.25" y="462" width="214" height="32" rx="0" ry="0" class="class-header-box"/>
+      <text x="235.25" y="478" font-size="13" class="node-label class-title" text-anchor="middle" dy="4.55px">TemperatureMeasure</text>
+      <line x1="128.25" y1="494" x2="342.25" y2="494" class="class-divider"/>
+      <text x="136.25" y="508" class="class-member mono" dy="0.35em"><tspan class="member-visibility">- </tspan><tspan class="member-name">h</tspan><tspan class="member-punct">: </tspan><tspan class="member-type">Sensor</tspan></text>
+      <text x="136.25" y="528" class="class-member mono" dy="0.35em"><tspan class="member-visibility">- </tspan><tspan class="member-name">measure</tspan><tspan class="member-punct">: </tspan><tspan class="member-type">MeasureCount</tspan></text>
+      <line x1="128.25" y1="542" x2="342.25" y2="542" class="class-divider"/>
+      <text x="136.25" y="556" class="class-member mono" dy="0.35em"><tspan class="member-visibility">+ </tspan><tspan class="member-name">TemperatureMeasure(Sensor h)</tspan></text>
+      <text x="136.25" y="576" class="class-member mono" dy="0.35em"><tspan class="member-visibility">+ </tspan><tspan class="member-name">getNumber()</tspan><tspan class="member-punct">: </tspan><tspan class="member-type">int</tspan></text>
+      <text x="136.25" y="596" class="class-member mono" dy="0.35em"><tspan class="member-visibility">+ </tspan><tspan class="member-name">getValue()</tspan><tspan class="member-punct">: </tspan><tspan class="member-type">double</tspan></text>
+      <text x="136.25" y="616" class="class-member mono" dy="0.35em"><tspan class="member-visibility">+ </tspan><tspan class="member-name">setValue()</tspan><tspan class="member-punct">: </tspan><tspan class="member-type">void</tspan></text>
+      <text x="136.25" y="636" class="class-member mono" text-decoration="underline" dy="0.35em"><tspan class="member-visibility">+ </tspan><tspan class="member-name">getTotal()</tspan><tspan class="member-punct">: </tspan><tspan class="member-type">int</tspan></text>
+    </g>
+    <g class="class-node" data-id="MeasureCount" data-label="MeasureCount">
+      <rect x="93.1" y="770" width="141.4" height="168" rx="0" ry="0" class="node-shape class-box"/>
+      <rect x="93.1" y="770" width="141.4" height="32" rx="0" ry="0" class="class-header-box"/>
+      <text x="163.8" y="786" font-size="13" class="node-label class-title" text-anchor="middle" dy="4.55px">MeasureCount</text>
+      <line x1="93.1" y1="802" x2="234.5" y2="802" class="class-divider"/>
+      <text x="101.1" y="816" class="class-member mono" dy="0.35em"><tspan class="member-visibility">- </tspan><tspan class="member-name">number</tspan><tspan class="member-punct">: </tspan><tspan class="member-type">int</tspan></text>
+      <text x="101.1" y="836" class="class-member mono" text-decoration="underline" dy="0.35em"><tspan class="member-visibility">- </tspan><tspan class="member-name">total</tspan><tspan class="member-punct">: </tspan><tspan class="member-type">int</tspan></text>
+      <line x1="93.1" y1="850" x2="234.5" y2="850" class="class-divider"/>
+      <text x="101.1" y="864" class="class-member mono" dy="0.35em"><tspan class="member-visibility">+ </tspan><tspan class="member-name">MeasureCount()</tspan></text>
+      <text x="101.1" y="884" class="class-member mono" dy="0.35em"><tspan class="member-visibility">+ </tspan><tspan class="member-name">increment()</tspan><tspan class="member-punct">: </tspan><tspan class="member-type">void</tspan></text>
+      <text x="101.1" y="904" class="class-member mono" dy="0.35em"><tspan class="member-visibility">+ </tspan><tspan class="member-name">getNumber()</tspan><tspan class="member-punct">: </tspan><tspan class="member-type">int</tspan></text>
+      <text x="101.1" y="924" class="class-member mono" text-decoration="underline" dy="0.35em"><tspan class="member-visibility">+ </tspan><tspan class="member-name">getTotal()</tspan><tspan class="member-punct">: </tspan><tspan class="member-type">int</tspan></text>
+    </g>
+    <g class="class-node" data-id="Sensor" data-label="Sensor">
+      <rect x="274.5" y="790" width="194.2" height="128" rx="0" ry="0" class="node-shape class-box"/>
+      <rect x="274.5" y="790" width="194.2" height="32" rx="0" ry="0" class="class-header-box"/>
+      <text x="371.6" y="806" font-size="13" class="node-label class-title" text-anchor="middle" dy="4.55px">Sensor</text>
+      <line x1="274.5" y1="822" x2="468.7" y2="822" class="class-divider"/>
+      <text x="282.5" y="836" class="class-member mono" dy="0.35em"><tspan class="member-visibility">- </tspan><tspan class="member-name">value</tspan><tspan class="member-punct">: </tspan><tspan class="member-type">int</tspan></text>
+      <line x1="274.5" y1="850" x2="468.7" y2="850" class="class-divider"/>
+      <text x="282.5" y="864" class="class-member mono" dy="0.35em"><tspan class="member-visibility">+ </tspan><tspan class="member-name">Sensor()</tspan></text>
+      <text x="282.5" y="884" class="class-member mono" dy="0.35em"><tspan class="member-visibility">+ </tspan><tspan class="member-name">setValue(int value)</tspan><tspan class="member-punct">: </tspan><tspan class="member-type">void</tspan></text>
+      <text x="282.5" y="904" class="class-member mono" dy="0.35em"><tspan class="member-visibility">+ </tspan><tspan class="member-name">getValue()</tspan><tspan class="member-punct">: </tspan><tspan class="member-type">int</tspan></text>
+    </g>
+    <rect x="24.82" y="386.35" width="74" height="22.3" rx="2" ry="2" class="edge-label-bg"/>
+    <text x="61.82" y="397.5" font-size="11" class="edge-label" text-anchor="middle" dy="3.85px">Реализует</text>
+    <rect x="293.55" y="726.85" width="91.37" height="22.3" rx="2" ry="2" class="edge-label-bg"/>
+    <text x="339.24" y="738" font-size="11" class="edge-label" text-anchor="middle" dy="3.85px">Агрегация (h)</text>
+    <rect x="93.09" y="698.85" width="141.42" height="22.3" rx="2" ry="2" class="edge-label-bg"/>
+    <text x="163.8" y="710" font-size="11" class="edge-label" text-anchor="middle" dy="3.85px">Композиция (measure)</text>
+    <rect x="172.44" y="390.85" width="170.02" height="22.3" rx="2" ry="2" class="edge-label-bg"/>
+    <text x="257.45" y="402" font-size="11" class="edge-label" text-anchor="middle" dy="3.85px">Зависимость (использует)</text>
+    <rect x="374.12" y="576" width="59.7" height="22.3" rx="2" ry="2" class="edge-label-bg"/>
+    <text x="403.97" y="587.15" font-size="11" class="edge-label" text-anchor="middle" dy="3.85px">Создает</text>
+    <rect x="407.97" y="394.35" width="59.7" height="22.3" rx="2" ry="2" class="edge-label-bg"/>
+    <text x="437.82" y="405.5" font-size="11" class="edge-label" text-anchor="middle" dy="3.85px">Создает</text>
+    <rect x="331.63" y="243" width="66.85" height="22.3" rx="2" ry="2" class="edge-label-bg"/>
+    <text x="365.05" y="254.15" font-size="11" class="edge-label" text-anchor="middle" dy="3.85px">Вызывает</text>
+  </g>
+</svg>
